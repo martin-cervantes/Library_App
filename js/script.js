@@ -1,5 +1,7 @@
 let myLibrary = [];
 
+const form = document.getElementById('form_container');
+
 function Book(author, title, numPages, beenRead) {
   this.author = author;
   this.title = title;
@@ -7,8 +9,28 @@ function Book(author, title, numPages, beenRead) {
   this.beenRead = beenRead;
 }
 
+function hideForm() {
+  form.classList.add('hide');
+}
+
+function showForm() {
+  form.classList.remove('hide');
+
+  const inputs = [...document.getElementsByClassName("inputs")];
+
+  for (let i = 0; i < inputs.length; i += 1) {
+    if (inputs[i].type === 'text' || inputs[i].type === 'number') {
+      inputs[i].value = '';
+    } else {
+      inputs[i].checked = false;
+    }
+  }
+}
+
 function addBookToLibrary(book) {
   myLibrary.push(book);
+
+  hideForm();
 }
 
 function removeBookToLibrary(index) {
