@@ -9,6 +9,18 @@ function Book(author, title, numPages, beenRead) {
   this.beenRead = beenRead;
 }
 
+function checkForm(author, title, numPages, beenRead) {
+  if (author === '')
+    alert('Author can\'t be blank');
+  else if (title === '')
+    alert('Title can\'t be blank');
+  else if (numPages === '')
+    alert('Number of pages can\'t be blank');
+  else
+    addBookToLibrary(new Book(author, title, numPages, beenRead));
+
+}
+
 function hideForm() {
   form.classList.add('hide');
 }
