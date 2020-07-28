@@ -9,7 +9,12 @@ function Book(author, title, numPages, beenRead) {
 
 function addBookToLibrary(book) {
   myLibrary.push(book);
+}
 
+function removeBookToLibrary(index) {
+  if (confirm('Would you like to delete this book ??')) {
+    myLibrary.splice(index, 1);
+  }
 }
 
 myLibrary = [new Book('Julio Verne', 'Five weeks in a balloon', '288', true)];
