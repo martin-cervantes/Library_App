@@ -11,6 +11,14 @@ function Book(author, title, numPages, beenRead) {
   this.beenRead = beenRead;
 }
 
+Book.prototype.toggleBeenRead = function() {
+  this.beenRead = !this.beenRead
+};
+
+function toggleBeenRead(index) {
+  myLibrary[index].toggleBeenRead();
+}
+
 function checkForm(author, title, numPages, beenRead) {
   if (author === '')
     alert('Author can\'t be blank');
