@@ -109,7 +109,7 @@ section {
 
 body {
   color: blue;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 16px;
   line-height: 1;
 }
@@ -137,9 +137,17 @@ table {
   border-spacing: 0;
 }
 
-/* YOUR CODE HERE */
-
 .fa-copyright {
   background-color: red;
   font-size: 15em;
+}
+
+.hide {
+  display: none;
+}
+
+#form_container {
+  position: absolute;
+  top: 0;
+  z-index: 1;
 }

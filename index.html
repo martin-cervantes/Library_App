@@ -1,21 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta http-equiv='X-UA-Compatible' content='ie=edge'>
 
-        <title>Document</title>
+        <title>Library App</title>
 
-        <link rel="icon" type="image/x-icon" href="img/icon.png">
+        <link rel='icon' type='image/x-icon' href='img/icon.png'>
 
-        <link rel="stylesheet" type="text/css" href="css/font_awesome.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel='stylesheet' type='text/css' href='css/font_awesome.css'>
+        <link rel='stylesheet' type='text/css' href='css/style.css'>
     </head>
     <body>
-        <i class="far fa-copyright"></i>
+        <h1>Library App</h1>
 
-        <script src="js/font_awesome.min.js"></script>
-        <script src="js/script.js"></script>
+        <div id='form_container'>
+            <form>
+                <label for='book_author'>Author</label>
+                <input id='book_author' name='book_author' class='inputs' type='text' />
+
+                <label for='book_title'>Title</label>
+                <input id='book_title' name='book_title' class='inputs' type='text' />
+
+                <label for='book_numPages'>Num of pages</label>
+                <input id='book_numPages' name='book_numPages' class='inputs' type='number' />
+
+                <label for='book_beenRead'>Have you read this book?</label>
+                <input id='book_beenRead' name='book_beenRead' class='inputs' type='checkbox' />
+
+                <button type='button' name='save' onclick='checkForm(book_author.value, book_title.value, book_numPages.value, book_beenRead.checked)'>Guardar</button>
+                <button type='button' name='cancel' onclick='hideForm()'>Cancel</button>
+            </form>
+        </div>
+
+        <script src='js/font_awesome.min.js'></script>
+        <script src='js/script.js'></script>
     </body>
 </html>
