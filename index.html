@@ -15,6 +15,19 @@
     <body>
         <h1>Library App</h1>
 
+        <button type='button' name='create' onclick='showForm()'>New Book</button>
+
+        <div id='books_container'>
+            <div class='book'>
+                <i class="fas fa-trash-alt"></i>
+                <p><span>Author:</span>Julio Verne</p>
+                <p><span>Title:</span>Five weeks in a balloon</p>
+                <p><span># pages:</span>288</p>
+                <p><span>Have you read this book?</span> <input id="book" type="checkbox" checked>
+                </p>
+            </div>
+        </div>
+
         <div id='form_container'>
             <form>
                 <label for='book_author'>Author</label>
