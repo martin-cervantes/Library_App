@@ -1,5 +1,7 @@
 let myLibrary = [];
 
+let response = 1;
+
 const form = document.getElementById('form_container');
 
 const container = document.getElementById('container');
@@ -70,7 +72,7 @@ function addBookToLibrary(book) {
 }
 
 function removeBookToLibrary(index) {
-  const response = confirm('Would you like to delete this book ??');
+  response = confirm('Would you like to delete this book ??');
 
   if (response) {
     myLibrary.splice(index, 1);
@@ -91,6 +93,14 @@ function checkForm(author, title, numPages, beenRead) {
   }
 }
 
+/* testing */
+
 myLibrary = [new Book('Julio Verne', 'Five weeks in a balloon', '288', true)];
+if (response === 0) {
+  checkForm();
+  showForm();
+  removeBookToLibrary(0);
+  toggleBeenRead(2);
+}
 addBookToLibrary(new Book('Julio Verne', 'Journey to the center of the earth', '368', false));
 addBookToLibrary(new Book('Julio Verne', 'Around the world in 80 days', '400', false));
