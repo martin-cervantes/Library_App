@@ -9,41 +9,37 @@
 
         <link rel='icon' type='image/x-icon' href='img/icon.png'>
 
+        <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap' rel='stylesheet'>
         <link rel='stylesheet' type='text/css' href='css/font_awesome.css'>
         <link rel='stylesheet' type='text/css' href='css/style.css'>
     </head>
     <body>
-        <h1>Library App</h1>
+        <h1 class='title green'>Library App</h1>
 
-        <button type='button' name='create' onclick='showForm()'>New Book</button>
+        <div id="container">
+            <button type='button' name='create' class='button green' onclick='showForm()'>New Book</button>
 
-        <div id='books_container'>
-            <div class='book'>
-                <i class="fas fa-trash-alt"></i>
-                <p><span>Author:</span>Julio Verne</p>
-                <p><span>Title:</span>Five weeks in a balloon</p>
-                <p><span># pages:</span>288</p>
-                <p><span>Have you read this book?</span> <input id="book" type="checkbox" checked>
-                </p>
-            </div>
+            <div id='books_container'></div>
         </div>
 
         <div id='form_container'>
             <form>
-                <label for='book_author'>Author</label>
+                <label class='label blue' for='book_author'>Author</label>
                 <input id='book_author' name='book_author' class='inputs' type='text' />
 
-                <label for='book_title'>Title</label>
+                <label class='label blue' for='book_title'>Title</label>
                 <input id='book_title' name='book_title' class='inputs' type='text' />
 
-                <label for='book_numPages'>Num of pages</label>
+                <label class='label blue' for='book_numPages'>Num of pages</label>
                 <input id='book_numPages' name='book_numPages' class='inputs' type='number' />
 
-                <label for='book_beenRead'>Have you read this book?</label>
+                <label class='label blue' for='book_beenRead'>Have you read this book?</label>
                 <input id='book_beenRead' name='book_beenRead' class='inputs' type='checkbox' />
 
-                <button type='button' name='save' onclick='checkForm(book_author.value, book_title.value, book_numPages.value, book_beenRead.checked)'>Guardar</button>
-                <button type='button' name='cancel' onclick='hideForm()'>Cancel</button>
+                <div class="button_container">
+                    <button type='button' name='save' class='button blue' onclick='checkForm(book_author.value, book_title.value, book_numPages.value, book_beenRead.checked)'>Guardar</button>
+                    <button type='button' name='cancel' class='button red' onclick='hideForm()'>Cancel</button>
+                </div>
             </form>
         </div>
 

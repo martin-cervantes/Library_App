@@ -2,6 +2,8 @@ let myLibrary = [];
 
 const form = document.getElementById('form_container');
 
+const container = document.getElementById('container');
+
 const books = document.getElementById('books_container');
 
 function Book(author, title, numPages, beenRead) {
@@ -11,34 +13,24 @@ function Book(author, title, numPages, beenRead) {
   this.beenRead = beenRead;
 }
 
-Book.prototype.toggleBeenRead = function() {
-  this.beenRead = !this.beenRead
+Book.prototype.toggleBeenRead = function () {
+  this.beenRead = !this.beenRead;
 };
 
 function toggleBeenRead(index) {
   myLibrary[index].toggleBeenRead();
 }
 
-function checkForm(author, title, numPages, beenRead) {
-  if (author === '')
-    alert('Author can\'t be blank');
-  else if (title === '')
-    alert('Title can\'t be blank');
-  else if (numPages === '')
-    alert('Number of pages can\'t be blank');
-  else
-    addBookToLibrary(new Book(author, title, numPages, beenRead));
-
-}
-
 function hideForm() {
   form.classList.add('hide');
+  container.classList.remove('hide');
 }
 
 function showForm() {
   form.classList.remove('hide');
+  container.classList.add('hide');
 
-  const inputs = [...document.getElementsByClassName("inputs")];
+  const inputs = [...document.getElementsByClassName('inputs')];
 
   for (let i = 0; i < inputs.length; i += 1) {
     if (inputs[i].type === 'text' || inputs[i].type === 'number') {
@@ -53,14 +45,14 @@ function render() {
   let innerHTML = '';
 
   for (let i = 0; i < myLibrary.length; i += 1) {
-    innerHTML += `<div class='book'><p><span>Author</span> ${myLibrary[i].author}</p>`;
+    innerHTML += `<div class='book'><p class='info'><span class='label blue'>Author:</span> ${myLibrary[i].author}</p>`;
     innerHTML += `<i class='fas fa-trash-alt' onclick="removeBookToLibrary(${i})"></i>`;
-    innerHTML += `<p><span>Title</span> ${myLibrary[i].title}</p>`;
-    innerHTML += `<p><span># pages</span> ${myLibrary[i].numPages}</p>`;
-    innerHTML += "<p><span>Have you read this book?</span><input type='checkbox' ";
+    innerHTML += `<p class='info'><span class='label blue'>Title:</span> ${myLibrary[i].title}</p>`;
+    innerHTML += `<p class='info'><span class='label blue'># Pages:</span> ${myLibrary[i].numPages}</p>`;
+    innerHTML += "<p class='info'><span class='label blue'>Have you read this book?</span><input type='checkbox' ";
 
     if (myLibrary[i].beenRead) {
-      innerHTML +=  'checked ';
+      innerHTML += 'checked ';
     }
 
     innerHTML += `onclick="toggleBeenRead(${i})" /></p></div>`;
@@ -78,11 +70,25 @@ function addBookToLibrary(book) {
 }
 
 function removeBookToLibrary(index) {
-  if (confirm('Would you like to delete this book ??')) {
+  const response = confirm('Would you like to delete this book ??');
+
+  if (response) {
     myLibrary.splice(index, 1);
   }
 
   render();
+}
+
+function checkForm(author, title, numPages, beenRead) {
+  if (author === '') {
+    alert('Author can\'t be blank');
+  } else if (title === '') {
+    alert('Title can\'t be blank');
+  } else if (numPages === '') {
+    alert('Number of pages can\'t be blank');
+  } else {
+    addBookToLibrary(new Book(author, title, numPages, beenRead));
+  }
 }
 
 myLibrary = [new Book('Julio Verne', 'Five weeks in a balloon', '288', true)];
