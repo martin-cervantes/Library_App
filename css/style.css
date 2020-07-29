@@ -139,27 +139,22 @@ table {
   border-spacing: 0;
 }
 
-:root {
-  --blue: #173f5f;
-  --light_blue: #20639b;
-  --green: #3caea3;
-  --red: #ed553b;
-  --gray: #cfcfcf;
-  --light_gray: #f2f2f2;
-}
-
 /* create new book form */
 
 .green {
-  color: var(--green);
+  color: #3caea3;
 }
 
 .blue {
-  color: var(--blue);
+  color: #173f5f;
 }
 
 .red {
-  color: var(--red);
+  color: #ed553b;
+}
+
+.light_gray {
+  background-color: #f2f2f2;
 }
 
 .hide {
@@ -167,8 +162,7 @@ table {
 }
 
 #form_container {
-  background-color: var(--light_gray);
-  border: 0.2rem solid var(--gray);
+  border: 0.2rem solid #cfcfcf;
   border-radius: 0.5rem;
   box-shadow: 1rem 1rem;
   margin: 1rem auto;
@@ -184,7 +178,6 @@ input[type=number],
 }
 
 .button {
-  background-color: var(--light_gray);
   cursor: pointer;
   font-weight: 700;
   padding: 0.5rem 1rem;
@@ -192,7 +185,7 @@ input[type=number],
 }
 
 .button:hover {
-  background-color: var(--gray);
+  background-color: #cfcfcf;
 }
 
 .title {
@@ -201,7 +194,7 @@ input[type=number],
   letter-spacing: 1rem;
   padding: 2rem 0;
   text-align: center;
-  text-decoration: underline var(--red);
+  text-decoration: underline #ed553b;
 }
 
 #books_container {
@@ -211,8 +204,7 @@ input[type=number],
 }
 
 .book {
-  background-color: var(--light_gray);
-  border: 0.2rem solid var(--gray);
+  border: 0.2rem solid #cfcfcf;
   border-radius: 0.5rem;
   box-shadow: 1rem 1rem;
   margin: 1rem;
@@ -227,13 +219,13 @@ input[type=number],
 }
 
 .info {
-  color: var(--light_blue);
+  color: #20639b;
   font-weight: 900;
   margin: 0.5rem 0;
 }
 
 .fa-trash-alt {
-  color: var(--gray);
+  color: #cfcfcf;
   cursor: pointer;
   position: absolute;
   right: 0.5rem;
@@ -241,5 +233,5 @@ input[type=number],
 }
 
 .fa-trash-alt:hover {
-  color: var(--red);
+  color: #ed553b;
 }

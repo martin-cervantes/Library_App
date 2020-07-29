@@ -45,7 +45,7 @@ function render() {
   let innerHTML = '';
 
   for (let i = 0; i < myLibrary.length; i += 1) {
-    innerHTML += `<div class='book'><p class='info'><span class='label blue'>Author:</span> ${myLibrary[i].author}</p>`;
+    innerHTML += `<div class='book light_gray'><p class='info'><span class='label blue'>Author:</span> ${myLibrary[i].author}</p>`;
     innerHTML += `<i class='fas fa-trash-alt' onclick="removeBookToLibrary(${i})"></i>`;
     innerHTML += `<p class='info'><span class='label blue'>Title:</span> ${myLibrary[i].title}</p>`;
     innerHTML += `<p class='info'><span class='label blue'># Pages:</span> ${myLibrary[i].numPages}</p>`;

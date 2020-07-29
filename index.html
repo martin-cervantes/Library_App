@@ -17,12 +17,12 @@
         <h1 class='title green'>Library App</h1>
 
         <div id="container">
-            <button type='button' name='create' class='button green' onclick='showForm()'>New Book</button>
+            <button type='button' name='create' class='button green light_gray' onclick='showForm()'>New Book</button>
 
             <div id='books_container'></div>
         </div>
 
-        <div id='form_container'>
+        <div id='form_container' class='light_gray'>
             <form>
                 <label class='label blue' for='book_author'>Author</label>
                 <input id='book_author' name='book_author' class='inputs' type='text' />
@@ -37,8 +37,8 @@
                 <input id='book_beenRead' name='book_beenRead' class='inputs' type='checkbox' />
 
                 <div class="button_container">
-                    <button type='button' name='save' class='button blue' onclick='checkForm(book_author.value, book_title.value, book_numPages.value, book_beenRead.checked)'>Save</button>
-                    <button type='button' name='cancel' class='button red' onclick='hideForm()'>Cancel</button>
+                    <button type='button' name='save' class='button blue light_gray' onclick='checkForm(book_author.value, book_title.value, book_numPages.value, book_beenRead.checked)'>Save</button>
+                    <button type='button' name='cancel' class='button red light_gray' onclick='hideForm()'>Cancel</button>
                 </div>
             </form>
         </div>
