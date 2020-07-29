@@ -10,13 +10,13 @@
         <link rel='icon' type='image/x-icon' href='img/icon.png'>
 
         <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap' rel='stylesheet'>
-        <link rel='stylesheet' type='text/css' href='css/font_awesome.css'>
-        <link rel='stylesheet' type='text/css' href='css/style.css'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css' rel='stylesheet' >
+        <link href='css/style.css' rel='stylesheet' type='text/css' >
     </head>
     <body>
         <h1 class='title green'>Library App</h1>
 
-        <div id="container">
+        <div id='container'>
             <button type='button' name='create' class='button green light_gray' onclick='showForm()'>New Book</button>
 
             <div id='books_container'></div>
@@ -36,14 +36,14 @@
                 <label class='label blue' for='book_beenRead'>Have you read this book?</label>
                 <input id='book_beenRead' name='book_beenRead' class='inputs' type='checkbox' />
 
-                <div class="button_container">
+                <div class='button_container'>
                     <button type='button' name='save' class='button blue light_gray' onclick='checkForm(book_author.value, book_title.value, book_numPages.value, book_beenRead.checked)'>Save</button>
                     <button type='button' name='cancel' class='button red light_gray' onclick='hideForm()'>Cancel</button>
                 </div>
             </form>
         </div>
 
-        <script src='js/font_awesome.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js'></script>
         <script src='js/script.js'></script>
     </body>
 </html>
