@@ -72,7 +72,7 @@ function addBookToLibrary(book) {
 }
 
 function removeBookToLibrary(index) {
-  response = confirm('Would you like to delete this book ??');
+  response = window.confirm('Would you like to delete this book ??');
 
   if (response) {
     myLibrary.splice(index, 1);
