@@ -1,21 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta http-equiv='X-UA-Compatible' content='ie=edge'>
 
-        <title>Document</title>
+        <title>Library App</title>
 
-        <link rel="icon" type="image/x-icon" href="img/icon.png">
+        <link href='img/icon.ico' rel='icon' type='image/x-icon'>
 
-        <link rel="stylesheet" type="text/css" href="css/font_awesome.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap' rel='stylesheet'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css' rel='stylesheet'>
+        <link href='css/style.css' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        <i class="far fa-copyright"></i>
+        <h1 class='title green'>Library App</h1>
 
-        <script src="js/font_awesome.min.js"></script>
-        <script src="js/script.js"></script>
+        <div id='container'>
+            <button type='button' name='create' class='button green light_gray' onclick='showForm()'>New Book</button>
+
+            <div id='books_container'></div>
+        </div>
+
+        <div id='form_container' class='light_gray'>
+            <form>
+                <label class='label blue' for='book_author'>Author</label>
+                <input id='book_author' name='book_author' class='inputs' type='text' />
+
+                <label class='label blue' for='book_title'>Title</label>
+                <input id='book_title' name='book_title' class='inputs' type='text' />
+
+                <label class='label blue' for='book_numPages'>Num of pages</label>
+                <input id='book_numPages' name='book_numPages' class='inputs' type='number' />
+
+                <label class='label blue' for='book_beenRead'>Have you read this book?</label>
+                <input id='book_beenRead' name='book_beenRead' class='inputs' type='checkbox' />
+
+                <div class='button_container'>
+                    <button type='button' name='save' class='button blue light_gray' onclick='checkForm(book_author.value, book_title.value, book_numPages.value, book_beenRead.checked)'>Save</button>
+                    <button type='button' name='cancel' class='button red light_gray' onclick='hideForm()'>Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js'></script>
+        <script src='js/script.js'></script>
     </body>
 </html>

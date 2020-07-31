@@ -109,9 +109,11 @@ section {
 
 body {
   color: blue;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Roboto', serif;
   font-size: 16px;
   line-height: 1;
+  margin: 0 auto;
+  width: 80%;
 }
 
 ol,
@@ -137,9 +139,99 @@ table {
   border-spacing: 0;
 }
 
-/* YOUR CODE HERE */
+/* create new book form */
 
-.fa-copyright {
-  background-color: red;
-  font-size: 15em;
+.green {
+  color: #3caea3;
+}
+
+.blue {
+  color: #173f5f;
+}
+
+.red {
+  color: #ed553b;
+}
+
+.light_gray {
+  background-color: #f2f2f2;
+}
+
+.hide {
+  display: none;
+}
+
+#form_container {
+  border: 0.2rem solid #cfcfcf;
+  border-radius: 0.5rem;
+  box-shadow: 1rem 1rem;
+  margin: 1rem auto;
+  padding: 1rem 2rem;
+  width: 15.5rem;
+}
+
+input[type=text],
+input[type=number],
+.button_container {
+  display: block;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.button {
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: #cfcfcf;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 1rem;
+  padding: 2rem 0;
+  text-align: center;
+  text-decoration: underline #ed553b;
+}
+
+#books_container {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  margin: 1rem 0;
+}
+
+.book {
+  border: 0.2rem solid #cfcfcf;
+  border-radius: 0.5rem;
+  box-shadow: 1rem 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  position: relative;
+}
+
+.label {
+  font-weight: 900;
+  line-height: 1.4rem;
+  text-transform: uppercase;
+}
+
+.info {
+  color: #20639b;
+  font-weight: 900;
+  margin: 0.5rem 0;
+}
+
+.fa-trash-alt {
+  color: #cfcfcf;
+  cursor: pointer;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+}
+
+.fa-trash-alt:hover {
+  color: #ed553b;
 }

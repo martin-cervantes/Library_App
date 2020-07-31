@@ -1,30 +1,41 @@
-# Project Name
+# Library App
 
-    Project brief description
+This is a simple project to put the concepts of classes, objects and constructors into practice in Javascript. In this library you can add or delete books and you can check the status of the book, whether you have read the book or not.
 
-![screenshot](./screenshot.png)
+![screenshot](./Screenshot.png)
 
 ## :package: Built With
 
-    - Plain HTML5
-    - Pure CSS3
-    - Font Awesome
+- Plain HTML5
+- Pure CSS3
+- Pure Javascript
 
 ## :mag: Live Demo
 
-[Live Demo Link](https://mcervantes71.github.io//index.html)
+[Live Demo Link](https://rawcdn.githack.com/mcervantes71/Library_App/feature/build_app/index.html)
 
 ## :computer: Getting Started
 
-    To get a local copy up and running follow these simple steps.
+To get a local copy up and running follow these simple steps.
 
-### Install
 
-    Download the repository.
+### Download
+
+1) Clone the repository to your local machine
+
+```sh
+  $ git clone https://github.com/mcervantes71/Library_App.git
+```
+
+2) cd into the directory
+
+```sh
+  $ cd Library_App
+```
 
 ### Usage
 
-    In any browser, open the index.html file.
+In any browser, open the index.html file.
 
 ## :busts_in_silhouette: Authors
 
