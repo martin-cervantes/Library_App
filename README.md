@@ -12,7 +12,7 @@ This is a simple project to put the concepts of classes, objects and constructor
 
 ## :mag: Live Demo
 
-[Live Demo Link](https://rawcdn.githack.com/mcervantes71/Library_App/feature/build_app/index.html)
+[Live Demo Link](https://mcervantes71.github.io/Library_App/index.html)
 
 ## :computer: Getting Started
 
